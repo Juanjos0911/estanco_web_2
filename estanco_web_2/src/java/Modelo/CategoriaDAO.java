@@ -46,4 +46,31 @@ public class CategoriaDAO {
         }
         return categoria;
     }
+     public boolean crear(Categoria cat){
+        try{
+            Conexion = new Conectar();
+            Connection con = Conexion.crearconexion();
+            if (con != null) {
+                System.out.println("Se ha establecido una conexcion con la base de datos");
+
+            }
+            pstm = con.prepareStatement("insert into categoria (nombre, descripcion, ofertas) Value(?,?,?)");
+            
+            pstm.setInt(1, cat.getId());
+            System.out.println(cat.getId());
+            pstm.setString(2, cat.getNombre());
+            System.out.println(cat.getNombre());
+            pstm.setString(3, cat.getDescripcion());
+            System.out.println(cat.getDescripcion());
+            pstm.executeUpdate();
+            return true;
+        }catch(Exception e){
+             System.out.println("Error al crear los productos" + e);
+             return false;
+        }
+    }
+
+    public void eliminar(String id) {
+        
+    }
 }
