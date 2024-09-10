@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-        <link href="/Estanco_web/css/inicio.css" rel="stylesheet" type="text/css"/>
+        <link href="/estanco_web_2/css/inicio.css" rel="stylesheet" type="text/css"/>
         <title>Estanco Currambero</title>
         <style>
             body {
@@ -78,9 +78,9 @@
         <!-- Header -->
         <header>
             <nav class="navbar navbar-dark bg-dark justify-content-between px-3">
-                <a href="/Estanco_web/CtrProducto?accion=inicio" class="navbar-brand">Inicio</a>
+                <a href="/estanco_web_2/CtrProducto?accion=inicio" class="navbar-brand">Inicio</a>
                 <div class="d-flex align-items-center">
-                    <a href="/Estanco_web/CtrProducto?accion=Carrito" class="nav-link"> Carrito<i class="bi bi-cart3">(<label style="color: darkorange">${contador}</label>)</i></a>
+                    <a href="/estanco_web_2/CtrProducto?accion=Carrito" class="nav-link"> Carrito<i class="bi bi-cart3">(<label style="color: darkorange">${contador}</label>)</i></a>
                     <a href="#" class="nav-link">Ofertas</a>
                     <div class="dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -88,7 +88,7 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-light">
                                 <c:forEach var="c" items="${categorias}">
-                                <li><a class="dropdown-item" href="/AppWeb/CtrProducto?accion=buscarcat&catid=${c.getId()}" ><i class="bi bi-bookmarks"></i> ${c.getNombre()}</a></li>
+                                <li><a class="dropdown-item" href="/estanco_web_2/CtrProducto?accion=buscarcat&catid=${c.getId()}" ><i class="bi bi-bookmarks"></i> ${c.getNombre()}</a></li>
                                 <input type="hidden" value="${c.getId()}" name="catid" id="catid">
                                 </c:forEach>
                                 <li><a class="dropdown-item" href="#" ><i></i> Todas</a></li>
@@ -111,7 +111,7 @@
         <!-- Cart Container -->
         <div class="cart-container">
             <div class="cart-image">
-                <img src="/Estanco_web/imagenes/carrito.jpeg" alt="Carrito Image" class="img-fluid">
+                <img src="/estanco_web_2/imagenes/carrito.jpeg" alt="Carrito Image" class="img-fluid">
             </div>
             <div class="product-list">
                 <table class="table">
