@@ -15,9 +15,11 @@
         <link href="../css/admin.css" rel="stylesheet" type="text/css"/>
     </head>
     <%
+        
         if (session.getAttribute("log") == null || session.getAttribute("log").equals('0')) {
             response.sendRedirect("../vista/Login.jsp");
         }
+    
     %>
     <body>
         <div class="wrapper">
@@ -140,8 +142,7 @@
                 </div>
         </div>
 
-        <!-- Modales para Ver y Editar -->
-        <!-- Modal Ver -->
+        
         <div class="modal fade" id="verModal" tabindex="-1" aria-labelledby="verModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -150,12 +151,12 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <!-- Contenido de los detalles del pedido -->
+                       
                         <p>Pedido: 1</p>
                         <p>Fecha: 12/08/2024</p>
                         <p>Valor: $100.000</p>
                         <p>Estado: En Proceso</p>
-                        <!-- Otros detalles del pedido -->
+                      
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -164,7 +165,7 @@
             </div>
         </div>
 
-        <!-- Modal Editar -->
+       
         <div class="modal fade" id="editarModal" tabindex="-1" aria-labelledby="editarModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
