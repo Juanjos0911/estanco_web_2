@@ -17,6 +17,8 @@ import javax.servlet.http.HttpSession;
 import org.mindrot.jbcrypt.BCrypt;
 
 public class CtrValidar extends HttpServlet {
+    
+   
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
