@@ -5,8 +5,12 @@
  */
 package Controladores;
 
+import Modelo.Categoria;
+import Modelo.CategoriaDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -29,20 +33,109 @@ public class CtrCategoria extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    CategoriaDAO cdao = new CategoriaDAO();
+    int idc, ofertas;
+    String nombre, descripcion;
+    Categoria ca = new Categoria();
+    List<Categoria> cate;
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet CtrCategoria</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet CtrCategoria at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+        String accion = request.getParameter("accion");
+        System.out.println("accion= " + accion);
+        String id;
+        try{
+            List<Categoria> categoria = new ArrayList();
+            categoria = cdao.Listar();            
+            System.out.println("categorias " + categoria.size());
+            switch(accion){
+                case "listarCategoria":
+                    request.setAttribute("categoria", categoria);
+                    System.out.println("se muestran Categorias" + categoria);
+                    request.getRequestDispatcher("/Vistas/Categorias.jsp").forward(request, response);
+                    break;
+                case "eliminar":
+                        id = request.getParameter("id");
+                        System.out.println("se ha eliminado la categoria por el id "+id);
+                        try{
+                            cdao.eliminar(id);
+                            categoria = cdao.Listar();
+                            request.setAttribute("categoria", categoria);
+                            System.out.println("Enviando la lista actualizada de categorías: " + categoria);
+                            response.sendRedirect("/FamiSaludLa91/CtrCategorias?accion=listarCategorias&mensaje=Categoria eliminada exitosamente");
+                        }catch(Exception e){
+                            e.printStackTrace();
+                            response.sendRedirect("/estanco_web_2/CtrCategoria?accion=listarCategoria&mensaje=Error%20al%20eliminar%20La%20categoria");
+                        }
+                    break;
+                case "agregar":
+                    System.out.println("agregar una nueva Categoria");
+                    nombre = request.getParameter("txtnombre");
+                    descripcion = request.getParameter("txtdescripcion");
+                    System.out.println("almaceno los datos");
+                    System.out.println(idc + nombre + descripcion);
+                    cate.setId(idc);
+                    cate.setNombre(nombre);
+                    cate.setDescripcion(descripcion);
+                    if (cdao.crear(cate) == true) {
+                        System.out.println("Se creo la nueva  Categoria");
+                        request.getRequestDispatcher("CtrCategoria?accion=listarCategoria").forward(request, response);
+                    }
+                    break;
+                case "EditarCategoria":
+                    System.out.println("entro a editar");
+                    idc = Integer.parseInt(request.getParameter("idc"));
+                    System.out.println("id" + idc);
+                    ca = cdao.listarT(idc);
+                    System.out.println("octuvo categoria: " + ca);
+                    request.setAttribute("CategoriaE", ca);
+                    request.setAttribute("editarCat", true);
+                    categoria = cdao.listarT();
+                    request.setAttribute("categoria", categoria);
+                    request.getRequestDispatcher("/Vistas/Categorias.jsp").forward(request, response);
+                    break;
+                case "actualizarCategoria":
+                    System.out.println("Entro a editar Categoria");
+
+                    nombre = request.getParameter("txtnombre");
+                    descripcion = request.getParameter("txtdescripcion");
+                    ofertas = Integer.parseInt(request.getParameter("txtofertas"));
+                    System.out.println("almaceno los datos");
+                    System.out.println(idc + nombre + descripcion + ofertas);
+
+                    ca.setNombre(nombre);
+                    ca.setDescripcion(descripcion);
+                    ca.setOfertas(ofertas);
+                    
+                    cdao.editar(ca);
+                     request.getRequestDispatcher("CtrCategorias?accion=listarCategorias").forward(request, response);
+                    break;
+                case "buscarCatInicio":
+                    CategoriaDAO catdao = new CategoriaDAO();
+                    List<Categoria> cat = catdao.listarT();
+                    request.setAttribute("Categorias", cat);
+                    request.getRequestDispatcher("/Vistas/Inicio.jsp").forward(request, response);
+                    
+                    break;
+                case "buscarCatCarrito":
+                    CategoriaDAO catdao2 = new CategoriaDAO();
+                    List<Categoria> cat2 = catdao2.listarT();
+                    request.setAttribute("Categorias", cat2);
+                    request.getRequestDispatcher("/CtrProductos?accion=Carrito").forward(request, response);
+                    
+                    break;
+                case "buscarCategoria":
+                    String cate = request.getParameter("busquedaCat");
+                    cate = cdao.buscarCa(cat);
+                    System.out.println(cate);
+                    request.setAttribute("categoria", cate);
+                    request.getRequestDispatcher("/Vistas/Categorias.jsp").forward(request, response);
+                    break;
+            }
+            
+        }catch(Exception e){
+            e.printStackTrace();
+            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Error en el procesamiento de la solicitud");
         }
     }
 
