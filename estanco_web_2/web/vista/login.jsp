@@ -16,12 +16,12 @@
     <body>
         <div class="container">
             <div class="left-side">
-                <img src="/Estanco_web/imagenes/logine.jpeg" alt="" class="shoe-image"/>
+                <img src="/estanco_web_2/imagenes/login.jpeg" alt="" class="shoe-image"/>
             </div>
             <div class="right-side">
                 <div id="form-container">
                     <!-- Formulario de inicio de sesión -->
-                    <form id="login-form" class="form active" action="/Estanco_web/CtrValidar" method="post">
+                    <form id="login-form" class="form active" action="/estanco_web_2/CtrValidar" method="post">
                         <h1> ¡Bienvenido! </h1>
                         
                         <div class="input-group">
@@ -34,7 +34,7 @@
                             <input type="password" name="txtpass" id="password" placeholder="Contraseña">
                         </div>
                         <div class="mt-6">
-                            <a href="/Estanco_web/vista/Login.jsp?signup=true" class="registro">No tienes cuenta? Registrate</a> 
+                            <a href="/estanco_web_2/vista/Login.jsp?signup=true" class="registro">No tienes cuenta? Registrate</a> 
                             <a href="#" class="forgot-password">¿Se te olvidó la contraseña?</a>
                         </div>
                         
