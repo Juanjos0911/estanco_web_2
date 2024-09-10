@@ -1,0 +1,206 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10/09/2024, 04:48:17 PM
+    Author     : SENA
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px; 
+}
+h5 {
+    margin-bottom: 20px; 
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.left-side {
+    background-color: #000;
+    width: 50%;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shoe-image {
+    width: 100%;
+    max-width: 400px;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-btn, .signup-btn {
+    background-color: transparent; 
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-left: auto;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.login-btn:hover, .signup-btn:hover {
+    background-color: orange; 
+    color: black;
+}
+
+.right-side {
+    width: 50%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.logo {
+    width: 100px;
+    margin-bottom: 30px;
+}
+
+#form-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.form {
+    display: none;
+    flex-direction: column;
+}
+
+.form.active {
+    display: flex;
+}
+
+.input-group-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 15px;
+    flex: 1;
+    margin-right: 10px;
+}
+
+.input-group:last-child {
+    margin-right: 0;
+}
+
+.input-group input {
+    width: 100%; 
+    padding: 10px 30px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-bottom: 2px solid orange;
+}
+
+.input-group .icon {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    font-size: 18px;
+}
+
+.forgot-password {
+    text-align: right;
+    color: orange;
+    font-size: 13px;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+.registro{
+    text-align: right;
+    color: orange;
+    font-size: 13px;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+.mt-6 {
+    margin-bottom: 20px;
+}
+.registro, .forgot-password {
+    margin: 10px;
+}
+.login-btn-form {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.login-btn-form:hover {
+    background-color: orange;
+}
+
+
+.formulario_label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: black;
+    margin-top: 10px; 
+    margin-bottom: 20px;
+}
+
+.formulario_checkbox {
+    margin-right: 10px; 
+    cursor: pointer;
+}
+
+.formulario_label input[type="checkbox"] {
+    margin: 0; 
+}
+
