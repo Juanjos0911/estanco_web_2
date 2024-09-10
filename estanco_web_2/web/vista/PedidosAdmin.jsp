@@ -195,7 +195,8 @@
                                     <option value="Entregado">Entregado</option>
                                 </select>
                             </div>
-                            <!-- Otros campos de edición -->
+                          
+                            
                         </form>
                     </div>
                     <div class="modal-footer">
