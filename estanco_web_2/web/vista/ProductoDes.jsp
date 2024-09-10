@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <title>Producto Descripcion</title>
-        <link href="/Estanco_web/css/inicio.css" rel="stylesheet" type="text/css"/>
+        <link href="/estanco_web_2/css/inicio.css" rel="stylesheet" type="text/css"/>
     </head>
     <style>
         body {
@@ -144,9 +144,9 @@
     <body>
         <header>
             <nav class="navbar navbar-dark bg-dark justify-content-between px-3">
-                <a href="/Estanco_web/CtrProducto?accion=inicio" class="navbar-brand">Inicio</a>
+                <a href="/estanco_web_2/CtrProducto?accion=inicio" class="navbar-brand">Inicio</a>
                 <div class="d-flex align-items-center">
-                    <a href="/Estanco_web/CtrProducto?accion=Carrito" class="nav-link"> Carrito<i class="bi bi-cart3">(<label style="color: darkorange">${contador}</label>)</i></a>
+                    <a href="/estanco_web_2/CtrProducto?accion=Carrito" class="nav-link"> Carrito<i class="bi bi-cart3">(<label style="color: darkorange">${contador}</label>)</i></a>
                     <a href="#" class="nav-link">Ofertas</a>
                     <div class="dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -166,10 +166,11 @@
                    <button class="btn btn-outline-light" type="submit" value="buscar" style="margin-right: 15px;"><i class="bi bi-search"></i></button>
                    </form>
 
-                   <a href="/Estanco_web/vista/Login.jsp" class="nav-link">Iniciar Sesión</a>
-                   <a href="/Estanco_web/vista/Login.jsp?signup=true" class="nav-link">Crear Cuenta</a>
+                   <a href="/estanco_web_2/vista/Login.jsp" class="nav-link">Iniciar Sesión</a>
+                   <a href="/estanco_web_2/vista/Login.jsp?signup=true" class="nav-link">Crear Cuenta</a>
                     </div>
             </nav>
+                    
         </header>
       <div class="container mt-5">
         <div class="row">

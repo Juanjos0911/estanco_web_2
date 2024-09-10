@@ -23,9 +23,9 @@
     <body>
         <header>
             <nav class="navbar navbar-dark bg-dark justify-content-between px-3">
-                <a href="/Estanco_web/CtrProducto?accion=inicio" class="navbar-brand">Inicio</a>
+                <a href="/estanco_web_2/CtrProducto?accion=inicio" class="navbar-brand">Inicio</a>
                 <div class="d-flex align-items-center">
-                    <a href="/Estanco_web/CtrProducto?accion=Carrito" class="nav-link"> Carrito<i class="bi bi-cart3">(<label style="color: darkorange">${contador}</label>)</i></a>
+                    <a href="/estanco_web_2/CtrProducto?accion=Carrito" class="nav-link"> Carrito<i class="bi bi-cart3">(<label style="color: darkorange">${contador}</label>)</i></a>
                     <a href="#" class="nav-link">Ofertas</a>
                     <div class="dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -33,7 +33,7 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark">
                             <c:forEach var="c" items="${categorias}">
-                                <li><a class="dropdown-item" href="/AppWeb/CtrProducto?accion=buscarcat&catid=${c.getId()}" ><i class="bi bi-bookmarks"></i> ${c.getNombre()}</a></li>
+                                <li><a class="dropdown-item" href="/estanco_web_2/CtrProducto?accion=buscarcat&catid=${c.getId()}" ><i class="bi bi-bookmarks"></i> ${c.getNombre()}</a></li>
                                 <input type="hidden" value="${c.getId()}" name="catid" id="catid">
                             </c:forEach>
                             <li><a class="dropdown-item" href="#" ><i></i> Todas</a></li>
@@ -50,7 +50,7 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
                             <li><a class="dropdown-item" href="#">Ciente</a></li>
-                            <li><a class="dropdown-item text-center" href="/Estanco_web/CtrProducto?accion=salir">Salir</a></li>
+                            <li><a class="dropdown-item text-center" href="/estanco_web_2/CtrProducto?accion=salir">Salir</a></li>
                         </ul>
                     </div>
                 </div>
@@ -61,28 +61,28 @@
         <div class="carousel">
             <div class="list">
                 <div class="item">
-                    <img src="/Estanco_web/imagenes/img1.jpg" alt=""/>
+                    <img src="/estanco_web_2/imagenes/img1.jpg" alt=""/>
                     <div class="content">
                         <div class="title">TODO TIPO</div>
                         <div class="topic">DE CERVEZAS</div>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="/Estanco_web/imagenes/img2.jpg" alt=""/>
+                    <img src="/estanco_web_2/imagenes/img2.jpg" alt=""/>
                     <div class="content">
                         <div class="title">Licores</div>
                         <div class="topic">Y RON</div>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="/Estanco_web/imagenes/img3.jpg" alt=""/>
+                    <img src="/estanco_web_2/imagenes/img3.jpg" alt=""/>
                     <div class="content">
                         <div class="title">MECATOS</div>
                         <div class="topic">Y MÁS...</div>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="/Estanco_web/imagenes/img4.jpg" alt=""/>
+                    <img src="/estanco_web_2/imagenes/img4.jpg" alt=""/>
                     <div class="content">
                         <div class="title">GASEOSAS</div>
                         <div class="topic">Y ENERGIZANTES</div>
@@ -92,7 +92,7 @@
 
             <div class="thumbnail">
                 <div class="item">
-                    <img src="/Estanco_web/imagenes/img1.jpg" alt=""/>
+                    <img src="/estanco_web_2/imagenes/img1.jpg" alt=""/>
                     <div class="content">
                         <div class="title">
                             Contamos con todo tipo de Cervezas.
@@ -100,7 +100,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img src="/Estanco_web/imagenes/img2.jpg" alt=""/>
+                    <img src="/estanco_web_2/imagenes/img2.jpg" alt=""/>
                     <div class="content">
                         <div class="title">
                             ¡Los mejores licores y ron del mercado!!
@@ -108,7 +108,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img src="/Estanco_web/imagenes/img3.jpg" alt=""/>
+                    <img src="/estanco_web_2/imagenes/img3.jpg" alt=""/>
                     <div class="content">
                         <div class="title">
                             ¡Mecatos y más!
@@ -116,7 +116,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img src="/Estanco_web/imagenes/img4.jpg" alt=""/>
+                    <img src="/estanco_web_2/imagenes/img4.jpg" alt=""/>
                     <div class="content">
                         <div class="title">
                             Gaseosas y Energizantes!!
@@ -135,13 +135,13 @@
         <div class="row justify-content-center" style="margin: 20px;">
             <c:forEach var="p" items="${productos}">
                 <div class="col-6 col-md-4 col-lg-2 mb-4">
-                    <a href="/Estanco_web/CtrProducto?accion=verProducto&id=${p.getId()}" class="product-card-link">
+                    <a href="/estanco_web_2/CtrProducto?accion=verProducto&id=${p.getId()}" class="product-card-link">
                         <div class="product-card">
                             <img src="${p.getFoto()}" alt="${p.getNombre()}" class="img-fluid">
                             <h2><c:out value="${p.getNombre()}"/></h2>
                             <div class="price-container">
                                 <div class="price">$<c:out value="${p.getPrecio()}"/></div>
-                                <a href="/Estanco_web/CtrProducto?accion=AgregarCarrito&id=${p.getId()}" class="order-btn">
+                                <a href="/estanco_web_2/CtrProducto?accion=AgregarCarrito&id=${p.getId()}" class="order-btn">
                                     <i class="bi bi-cart3"></i>
                                 </a>
                             </div>
@@ -174,7 +174,7 @@
                     <div class="col-md-4">
                         <h5>Enlaces Rápidos</h5>
                         <ul style="list-style-type: none; padding: 0;">
-                            <li><a href="/EstancoCurrambero/vista/VentasAdmin.jsp" style="color: white;">Inicio</a></li>
+                            <li><a href="/estanco_web_2/vista/VentasAdmin.jsp" style="color: white;">Inicio</a></li>
                             <li><a href="#" style="color: white;">Ofertas</a></li>
                             <li><a href="#" style="color: white;">Categorías</a></li>
                             <li><a href="#" style="color: white;">Ayuda</a></li>
