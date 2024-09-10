@@ -42,7 +42,7 @@
                     </form>
 
                     <!-- Formulario de registro -->
-                    <form id="signup-form" class="form" action="/Estanco_web/CtrUsuario?accion=nuevo" method="post">
+                    <form id="signup-form" class="form" action="/estanco_web_2/CtrUsuario?accion=nuevo" method="post">
                         
                         <h1>Crear tu cuenta:</h1>
                         <div class="input-group-row">
@@ -107,7 +107,7 @@
             
         </div>
         
-        <script src="/Estanco_web/JS/login.js" type="text/javascript"></script>
+        <script src="/estanco_web_2/JS/login.js" type="text/javascript"></script>
     </body>
     
 </html>
