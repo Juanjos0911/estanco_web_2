@@ -170,8 +170,8 @@
                    <button class="btn btn-outline-light" type="submit" value="buscar" style="margin-right: 15px;"><i class="bi bi-search"></i></button>
                    </form>
 
-                   <a href="/Estanco_web/vista/Login.jsp" class="nav-link">Iniciar Sesión</a>
-                   <a href="/Estanco_web/vista/Login.jsp?signup=true" class="nav-link">Crear Cuenta</a>
+                   <a href="/estanco_web_2vista/Login.jsp" class="nav-link">Iniciar Sesión</a>
+                   <a href="/estanco_web_2/vista/Login.jsp?signup=true" class="nav-link">Crear Cuenta</a>
                     </div>
             </nav>
                                 

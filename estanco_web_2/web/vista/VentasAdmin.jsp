@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <title>Inicio Administrador</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-        <link href="/Estanco_web/css/admin.css" rel="stylesheet" type="text/css"/>
+        <link href="/estanco_web_2/css/admin.css" rel="stylesheet" type="text/css"/>
         
         
     </head>
@@ -35,27 +35,27 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/Estanco_web/vista/ListarProductos.jsp">
+                        <a href="/estanco_web_2/vista/ListarProductos.jsp">
                             <i class="bi bi-grid"></i> Productos
                         </a>
                     </li>
                     <li>
-                        <a href="/Estanco_web/vista/ListarUsuario.jsp">
+                        <a href="/estanco_web_2/vista/ListarUsuario.jsp">
                             <i class="bi bi-people"></i> Usuarios
                         </a>
                     </li>
                     <li>
-                        <a href="/Estanco_web/vista/PedidosAdmin.jsp">
+                        <a href="/estanco_web_2/vista/PedidosAdmin.jsp">
                             <i class="bi bi-box-seam"></i> Pedidos
                         </a>
                     </li>
                     <li>
-                        <a href="/Estanco_web/vista/ListarProveedor.jsp">
+                        <a href="/estanco_web_2/vista/ListarProveedor.jsp">
                             <i class="bi bi-folder"></i> Proveedores
                         </a>
                     </li>
                     <li>
-                        <a href="/Estanco_web/vista/Categorias.jsp">
+                        <a href="/estanco_web_2/vista/Categorias.jsp">
                             <i class="bi bi-tags"></i> Categorias
                         </a>
                     </li>
@@ -70,7 +70,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/Estanco_web/CtrProducto?accion=salir">
+                        <a href="/estanco_web_2/CtrProducto?accion=salir">
                             <i class="bi bi-box-arrow-left"></i> Salir
                         </a>
                     </li>
