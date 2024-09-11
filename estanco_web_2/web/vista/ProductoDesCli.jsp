@@ -11,10 +11,10 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <title>Producto Descripcion</title>
-        <link href="../css/inicio.css" rel="stylesheet" type="text/css"/>
+        <link href="/estanco_web_2/css/inicio.css" rel="stylesheet" type="text/css"/>
     </head>
     <%
-        if (session.getAttribute("log") == null || session.getAttribute("log").equals('0')){
+        if (session.getAttribute("log") == null || session.getAttribute("log").equals('0')) {
             response.sendRedirect("../vista/Login.jsp");
         }
     %>
@@ -146,7 +146,7 @@
 
     </style>
     <body>
-             <header>
+        <header>
             <nav class="navbar navbar-dark bg-dark justify-content-between px-3">
                 <a href="/estanco_web_2/CtrProducto?accion=inicio" class="navbar-brand">Inicio</a>
                 <div class="d-flex align-items-center">
@@ -157,60 +157,66 @@
                             Categorías
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark">
-                                <c:forEach var="c" items="${categorias}">
-                                <li><a class="dropdown-item" href="/AppWeb/CtrProducto?accion=buscarcat&catid=${c.getId()}" ><i class="bi bi-bookmarks"></i> ${c.getNombre()}</a></li>
+                            <c:forEach var="c" items="${categorias}">
+                                <li><a class="dropdown-item" href="/estanco_web_2/CtrProducto?accion=buscarcat&catid=${c.getId()}" ><i class="bi bi-bookmarks"></i> ${c.getNombre()}</a></li>
                                 <input type="hidden" value="${c.getId()}" name="catid" id="catid">
-                                </c:forEach>
-                                <li><a class="dropdown-item" href="#" ><i></i> Todas</a></li>
+                            </c:forEach>
+                            <li><a class="dropdown-item" href="#" ><i></i> Todas</a></li>
                         </ul>
                     </div>
                     <a href="#" class="nav-link">Ayuda</a>
-                   <form class="d-flex ms-3" style="width: 340px;" action="/Estanco_web/CtrProducto?accion=buscar" method="post">
-                   <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" name="buscarr">
-                   <button class="btn btn-outline-light" type="submit" value="buscar" style="margin-right: 15px;"><i class="bi bi-search"></i></button>
-                   </form>
-
-                   <a href="/estanco_web_2vista/Login.jsp" class="nav-link">Iniciar Sesión</a>
-                   <a href="/estanco_web_2/vista/Login.jsp?signup=true" class="nav-link">Crear Cuenta</a>
+                    <form class="d-flex ms-3" style="width: 340px;" action="/estanco_web_2/CtrProducto?accion=buscar" method="post">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" name="buscarr">
+                        <button class="btn btn-outline-light" type="submit" value="buscar"><i class="bi bi-search"></i></button>
+                    </form>
+                    <div class="dropdown ms-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" href="#">Ciente</a></li>
+                            <li><a class="dropdown-item text-center" href="/estanco_web_2/CtrProducto?accion=salir">Salir</a></li>
+                        </ul>
                     </div>
-            </nav>
-                                
-        </header>
-    <div class="container mt-5">
-        <div class="row">
-            <!-- Product Image -->
-            <div class="col-md-6">
-             
-                    <img src="imagenes/aguila_original.jpeg" alt="${p.getNombre()}">
-            </div>
-
-            <div class="col-md-6">
-                <h1>Aguila Original</h1>
-                 <div class="price">$<c:out value="4.000"/></div>
-
-                <ul class="product-features list-unstyled">
-                    <li><i class="bi bi-check-circle-fill text-success"></i> Nota: Te llegara fría!</li>
-                </ul>
-
-                <!-- Botones organizados en columna -->
-                <div class="d-grid gap-2">
-                    <button class="btn btn-primary btn-checkout">Método de pago</button>
-                    <button class="btn btn-danger btn-checkout">Generar pedido</button>
                 </div>
+            </nav>
+
+        </header>
+        <div class="container mt-5">
+            <div class="row">
+                <!-- Product Image -->
+                <div class="col-md-6">
+
+                    <img src="imagenes/aguila_original.jpeg" alt="${p.getNombre()}">
+                </div>
+
+                <div class="col-md-6">
+                    <h1>Aguila Original</h1>
+                    <div class="price">$<c:out value="4.000"/></div>
+
+                    <ul class="product-features list-unstyled">
+                        <li><i class="bi bi-check-circle-fill text-success"></i> Nota: Te llegara fría!</li>
+                    </ul>
+
+                    <!-- Botones organizados en columna -->
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary btn-checkout">Método de pago</button>
+                        <button class="btn btn-danger btn-checkout">Generar pedido</button>
+                    </div>
+                </div>
+
             </div>
 
-        </div>
 
-    
-            
+
             <div class="row mt-5">
                 <div class="col-12">
                     <h4>Descripción del Producto</h4>
                     <p>Águila Original es más que una cerveza; es un símbolo de la tradición cervecera de Colombia y un ícono de la frescura y calidad. Con más de 100 años de historia, esta lager dorada es el reflejo perfecto del arte cervecero colombiano y una elección confiable para quienes buscan una experiencia auténtica y refrescante.</p>
                 </div>
             </div>
-                
-            </div>
+
+        </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>

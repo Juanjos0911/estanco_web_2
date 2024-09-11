@@ -40,7 +40,7 @@
                         </ul>
                     </div>
                     <a href="#" class="nav-link">Ayuda</a>
-                    <form class="d-flex ms-3" style="width: 340px;" action="/Estanco_web/CtrProducto?accion=buscar" method="post">
+                    <form class="d-flex ms-3" style="width: 340px;" action="/estanco_web_2/CtrProducto?accion=buscar" method="post">
                         <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" name="buscarr">
                         <button class="btn btn-outline-light" type="submit" value="buscar"><i class="bi bi-search"></i></button>
                     </form>
@@ -75,13 +75,6 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img src="/estanco_web_2/imagenes/img3.jpg" alt=""/>
-                    <div class="content">
-                        <div class="title">MECATOS</div>
-                        <div class="topic">Y MÁS...</div>
-                    </div>
-                </div>
-                <div class="item">
                     <img src="/estanco_web_2/imagenes/img4.jpg" alt=""/>
                     <div class="content">
                         <div class="title">GASEOSAS</div>
@@ -104,14 +97,6 @@
                     <div class="content">
                         <div class="title">
                             ¡Los mejores licores y ron del mercado!!
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="/estanco_web_2/imagenes/img3.jpg" alt=""/>
-                    <div class="content">
-                        <div class="title">
-                            ¡Mecatos y más!
                         </div>
                     </div>
                 </div>
