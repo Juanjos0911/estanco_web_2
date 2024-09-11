@@ -12,7 +12,7 @@
         <title>JSP Page</title>
     </head>
     <%
-        response.sendRedirect("/Estanco_web/CtrProducto?accion=inicio");
+        response.sendRedirect("/estanco_web_2/CtrProducto?accion=inicio");
     %>
     <body>
         <h1>Hello World!</h1>

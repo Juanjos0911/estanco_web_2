@@ -86,10 +86,10 @@ public class CtrProducto extends HttpServlet {
                 request.setAttribute("categorias", categorias);
                 request.setAttribute("producto", productos);
                 if (sesion.getAttribute("tipo") != null && sesion.getAttribute("tipo").equals("Cliente")) {
-                    request.getRequestDispatcher("/Estanco_web/vista/VentasCliente.jsp").forward(request, response);
+                    request.getRequestDispatcher("/estanco_web_2/vista/VentasCliente.jsp").forward(request, response);
                 } else {
                     System.out.println("Atributo Tipo es null, redirigiendo a inicio");
-                    request.getRequestDispatcher("/Estanco_web/vista/Inicio.jsp").forward(request, response);
+                    request.getRequestDispatcher("/estanco_web_2/vista/Inicio.jsp").forward(request, response);
                 }
                 break;
             case "buscar":
@@ -230,7 +230,7 @@ public class CtrProducto extends HttpServlet {
                 break;
             case "Ayuda":
                 request.setAttribute("Ayuda", true);
-                request.getRequestDispatcher("CtrProducto?accion=home").forward(request, response);
+                request.getRequestDispatcher("CtrProducto?accion=inicio").forward(request, response);
                 break;
         }
 

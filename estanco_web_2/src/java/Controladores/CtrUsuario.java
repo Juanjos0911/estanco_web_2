@@ -189,7 +189,7 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response)
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             usuarioDAO.crearUsuario(nombre, apellido, direccion, telefono, correo, fechanaci, usuario, contrasena);
 
-            response.sendRedirect("/Estanco_web/vista/Login.jsp");
+            response.sendRedirect("/estanco_web_2/vista/Login.jsp");
         }
       
   
