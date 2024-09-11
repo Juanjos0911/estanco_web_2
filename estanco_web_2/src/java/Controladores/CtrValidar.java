@@ -104,9 +104,9 @@ public class CtrValidar extends HttpServlet {
                     sesion.setAttribute("usuario", us);
 
                     if (us.getTipo().equals("Administrador")) {
-                        response.sendRedirect("/Estanco_web/CtrProducto?accion=inicio");
+                        response.sendRedirect("/estanco_web_2/CtrProducto?accion=inicio");
                     } else if (us.getTipo().equals("Cliente")) {
-                        response.sendRedirect("/Estanco_web/CtrProducto?accion=inicio");
+                        response.sendRedirect("/estanco_web_2/CtrProducto?accion=inicio");
                     }
                 } else {
                     response.sendRedirect("/vista/Login.jsp?ingreso=0");

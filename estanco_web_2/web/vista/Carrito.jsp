@@ -131,7 +131,7 @@
                                     <input type="number" id="cantidad" value="${car.getCantidad()}" class="form-control text-center" min="1">
                                 </td>
                                 <td>
-                                    <a class="btn btn-danger" href="CtrProducto_1?accion=EliminarPro&idp=${car.getIdproducto()}">
+                                    <a class="btn btn-danger" href="CtrProducto?accion=EliminarPro&idp=${car.getIdproducto()}">
                                         <i class="bi bi-trash3"></i>
                                     </a>
                                 </td>

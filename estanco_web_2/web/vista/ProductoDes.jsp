@@ -154,14 +154,14 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark">
                                 <c:forEach var="c" items="${categorias}">
-                                <li><a class="dropdown-item" href="/AppWeb/CtrProducto?accion=buscarcat&catid=${c.getId()}" ><i class="bi bi-bookmarks"></i> ${c.getNombre()}</a></li>
+                                <li><a class="dropdown-item" href="/estanco_web_2/CtrProducto?accion=buscarcat&catid=${c.getId()}" ><i class="bi bi-bookmarks"></i> ${c.getNombre()}</a></li>
                                 <input type="hidden" value="${c.getId()}" name="catid" id="catid">
                                 </c:forEach>
                                 <li><a class="dropdown-item" href="#" ><i></i> Todas</a></li>
                         </ul>
                     </div>
                     <a href="#" class="nav-link">Ayuda</a>
-                   <form class="d-flex ms-3" style="width: 340px;" action="/Estanco_web/CtrProducto?accion=buscar" method="post">
+                   <form class="d-flex ms-3" style="width: 340px;" action="/estanco_web_2/CtrProducto?accion=buscar" method="post">
                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" name="buscarr">
                    <button class="btn btn-outline-light" type="submit" value="buscar" style="margin-right: 15px;"><i class="bi bi-search"></i></button>
                    </form>
